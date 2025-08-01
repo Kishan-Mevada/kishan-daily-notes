@@ -1,0 +1,97 @@
+Kafka:
+    - Known for high-throughput, real-time data streaming and log aggregation.
+    Message Consumption Model:
+        - Pull based model.
+        - Consumers manage their own offsets (pointers to the last consumed message), allowing for
+          flexible consumption, re-reading messages, and managing flow control.
+    Storage Architecture:
+        - Designed as a distributed, log-based storage system. Messages are appended to immutable logs (topics) and
+          stored durably on disk, allowing for long-term retention and hig-throughput steaming.
+    Strengths:
+        - High throughput, Scalability, Fault Tolerance, and suitability for real-time data streaming and event sourcing.
+    Weaknesses:
+        - Can be more complex to set up and manage than RabbitMQ, and latency might be higher at very low throughput loads.
+    Use cases:
+        - Real-time analytics
+        - Log aggregation
+        - Event Sourcing
+        - Data pipelines
+        - Building streaming application
+
+RabbitMQ (AMQP):
+    - Excels in flexible routing and low-latency messaging, particularly in microservices.
+    Message Consumption Model:
+        - Push based model.
+        - Messages are pushed from exchanges to queues and to the consumers, relying on acknowledgment
+          for delivery confirmation.
+    Storage Architecture:
+        - Primarily a message queue that removes messages after consumptions (unless configured for persistence).
+        - It stores messages in memory and optionally persists them to disk for durability in case of broker failure.
+    Strengths:
+        - Flexible messaging patterns (pub/sub, routing), ease of use, and lower latency for certain scenarios.
+    Weaknesses:
+        - Might not scale as well as kafka for very high throughput workloads, and its push-based model can impact
+          performance at higher costs.
+    Use cases:
+        - Background job processing
+        - Microservices communication
+        - Scenarios requiring flexing routing and low-latency messaging
+
+IBM MQ:
+    - Robust enterprise messaging system often used in financial institutions, prioritizing reliability and transaction
+      management.
+    Message Consumption Model:
+        - Supports synchronous and asynchronous consumption.
+        - Asynchronous consumption uses MQI extensions like MQCB (Manage Callback) and MQCTL (Control Callback) to allow
+          applications to consume messages from multiple queues.
+    Storage Architecture:
+        - Employs queue managers to manage messages and queues.
+        - Storage can be ephemeral (in memory) or persistent (on disk), with a focus a transactional guarantees and
+          message durability withing the queue managers scope.
+    Strengths:
+        - Enterprise-grade reliability, transaction support, security features, and strong integration with IBM ecosystems.
+    Weaknesses:
+        - Can be more expensive than open-source alternatives, and might have a steeper learning curve for some users.
+    Use cases:
+        - Financial transactions
+        - Missing-critical applications
+        - Integration between different enterprise systems
+
+Pulsar:
+    - Offers a cloud native architecture with features like tiered storage and geo-replication. New among the others.
+    Message Consumption Model:
+        - Offers a push-based model with a pull like API.
+        - Consumers subscribe to topics and receive messages, with the underlying system managing the delivery and acknowledgements.
+    Storage Architecture:
+        - Leverages Apache BookKeeper for persistent message storage.
+        - BookKeeper provides a distributed write-ahead log system, allowing pulsar to separate compute (brokers) from
+          storage (Bookies) and enable tiered storage for cost-effective long-term data retention.
+    Strengths:
+        - Cloud native architecture, layered design (separating compute and storage), geo-replication and, tiered storage account.
+    Weaknesses:
+        - Can be more complex to set up than Kafka and RabbitMQ, and its ecosystem is still developing compared to the other options.
+    Use cases:
+        - Real-time analytics
+        - IoT data collection
+        - Multi-datacenter deployments
+
+** Key Considerations when choosing Message Queue **
+
+1) Throughput and latency requirements:
+    - Kafka is generally preferred for high-throughput scenarios
+    - While RabbitMQ can offer lower latency for certain workloads
+
+2) Scalability needs:
+    - Kafka and Pulsar are designed for horizontal scalability
+    - While RabbitMQ can be scaled by adding more consumers
+
+3) Complexity and manageability:
+    - RabbitMQ is generally considered easier to set up and manage
+    - While Kafka and pulsar might require more expertise
+
+4) Ecosystem and community support:
+    - Kafka boasts a large and active community support
+    - While IBM MQ has strong commercial support
+
+Specific use case requirements:
+    - Consider the specifics needs of your application, such as message ordering, persistence, and security
