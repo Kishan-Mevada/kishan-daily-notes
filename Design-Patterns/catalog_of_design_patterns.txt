@@ -1,0 +1,43 @@
+Design patterns catalog is divided by its purpose. Any Design pattern can have the following purpose
+    - Creational
+    - Structural
+    - Behavioral
+
+- Creational pattern concern the process of object creation.
+- Structural pattern deal with the composition of classes or objects.
+- Behavioral patterns characterize the ways in which classes and objects interact and distribute responsibilities.
+
+Design Pattern classification by its purpose.
+
+- Creational Design Patterns:
+    - Factory Method            (Scope: Class)
+    - Abstract Factory          (Scope: Object)
+    - Builder                   (Scope: Object)
+    - Prototype                 (Scope: Object)
+    - Singleton                 (Scope: Object)
+
+- Structural Patterns:
+    - Adapter                   (Scope: Object)
+    - Bridge                    (Scope: Object)
+    - Composite                 (Scope: Object)
+    - Decorator                 (Scope: Object)
+    - Facade                    (Scope: Object)
+    - Proxy                     (Scope: Object)
+
+- Behavioral:
+    - Interpreter               (Scope: Class)
+    - Template Method           (Scope: Class)
+    - Chain of Responsibility   (Scope: Object)
+    - Command                   (Scope: Object)
+    - Iterator                  (Scope: Object)
+    - Mediator                  (Scope: Object)
+    - Memento                   (Scope: Object)
+    - Flyweight                 (Scope: Object)
+    - Observer                  (Scope: Object)
+    - State                     (Scope: Object)
+    - Strategy                  (Scope: Object)
+    - Visitor                   (Scope: Object)
+
+- Scopes:
+    - Class: Deal with relationships between classes and subclasses through inheritance. it static-fixed at compile-time.
+    - Object: Deal with object relationships. dynamic and can be changed at run-time.
