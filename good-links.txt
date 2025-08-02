@@ -1,2 +1,12 @@
-Programming Notes of Books
+Programming Notes of Books:
     https://books.goalkicker.com/
+8 Best System Design Books:
+    https://medium.com/javarevisited/8-best-system-design-and-software-design-books-for-programmers-be54cb313106
+Top 7 Websites to learn System Design:
+    https://javarevisited.blogspot.com/2022/08/top-7-websites-to-learn-system-design.html
+Top 8 YouTube channels for System Design:
+    https://medium.com/javarevisited/top-8-youtube-channels-for-system-design-interview-preparation-970d103ea18d
+20 System Design Case Studies:
+    https://medium.com/javarevisited/6-system-design-articles-and-case-studies-for-software-developers-0eec081bc083
+10 Best System Design courses:
+    https://medium.com/javarevisited/10-best-system-design-courses-for-coding-interviews-949fd029ce65
