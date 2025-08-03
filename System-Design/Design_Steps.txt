@@ -1,0 +1,16 @@
+System Design Steps to follow:
+    1. Requirements
+        - Functional Requirements
+        - Non-Functional Requirements
+        - BOTE: Back of the envelope
+    2. Entities
+        - DB Schema and tables
+    3. API or Interface
+        - REST end points
+    4. Data Flow
+        - Applicable on infra heavy like Design messaging queue, Rate Limiter
+    5. High-Level Design
+        - Start with simple design, just outline system
+    6. Deep Dives
+        - Evolve design in details
+        - Cover Non-Functional requirements
