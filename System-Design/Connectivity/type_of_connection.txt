@@ -1,0 +1,9 @@
+Latency Sensitive
+    No -> Simple Poling
+    Yes ->
+        Frequent, Bi-Directional communication
+            No -> SSE (Server sent event)
+            Yes ->
+                Peer to Peer, Audio/Video
+                    No -> Websocket
+                    Yes -> WebRTC
